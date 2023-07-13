@@ -8,10 +8,11 @@
 /* right-side */
 .w-right{
     position: relative;
+    
 }
 
 .w-maincircle{
-    left:9rem;
+    left:15rem;
     position: relative;
     width: 18rem;
     height: 18rem;
@@ -82,4 +83,28 @@
     background: #f5c32c;
     left:18rem;
     top:8rem;
+}
+
+@media screen and (max-width:480px) {
+  .works{
+    flex-direction: column;
+    height: 55rem;
+    padding: 0; 
+    gap:5rem;
+  }
+
+  .w-right{
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    transform: scale(0.7);
+  }
+
+  .w-maincircle{
+    position: static;
+  }
+
+  .w-backcircle{
+    left: 8rem!important;
+  }
 }

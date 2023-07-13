@@ -8,7 +8,7 @@ import Humble from "../../img/humble.png";
 
 const Services = () => {
   return (
-    <div className="services">
+    <div className="services" id="Services">
       {/* left side */}
       <div className="awesome">
         <span>My Awesome</span>
@@ -28,6 +28,7 @@ const Services = () => {
       {/* right side */}
       <div className="cards">
         <div
+        
           style={{
             left: "14rem",
           }}
