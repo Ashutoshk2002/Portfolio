@@ -1,59 +1,76 @@
 import React from 'react';
 import "./works.css";
-import Upwork from "../../img/Upwork.png";
-import Fiverr from "../../img/fiverr.png";
-import Amazon from "../../img/amazon.png";
-import Shopify from "../../img/Shopify.png";
-import Facebook from "../../img/Facebook.png";
+// import Upwork from "../../img/Upwork.png";
+// import Fiverr from "../../img/fiverr.png";
+// import Amazon from "../../img/amazon.png";
+// import Shopify from "../../img/Shopify.png";
+// import Facebook from "../../img/Facebook.png";
+import js from "../../img/js.png"
+import expressjs from "../../img/expressjs.png"
+import nodejs from "../../img/nodejs.png"
+import react from "../../img/react.png"
+import mongodb from "../../img/mongodb.png"
+import { Link } from 'react-scroll';
+import { themeContext } from "../../Context";
+import { useContext } from 'react';
 
 const Works = () => {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
     return (
-        <div className="works">
+        <div className="works" id='Work'>
             {/* left side */}
             <div className="awesome">
-                <span>Works for All these</span>
-                <span>Brands & Clients</span>
+                <span style={{ color: darkMode ? "white" : "" }}>Worked on the</span>
+                <span>MERN Stack</span>
                 <span>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    ▶️I have experience working with the MERN stack,
+                    <br /> which is a popular JavaScript stack for building web applications.
                     <br />
-                    Id cum
-                    laudantium hic labore atque non, itaque mollitia, molestias
+                    ▶️I am proficient in all four technologies that make up the stack:
                     <br />
-                    necessitatibus quas magni excepturi dolores?
+                     MongoDB, Express, React, and Node.js.
                     <br />
-                    Soluta a deserunt
-                    corporis. Aut, reiciendis iste.
+                    ▶️I have used the MERN stack to build a variety of web applications
+                    <br />
+                    ▶️I am confident in my ability to use the MERN stack to build high-quality,
+                    <br /> scalable web applications.
                 </span>
-                <button className="button s-button">Hire me</button>
+                <Link spy={true} to='Contact' smooth={true}>
+                    <button className="button s-button">Hire me</button>
+                </Link>
 
                 <div className="blur s-blurl" style={{ background: "#ABF1FF94" }}></div>
             </div>
 
             {/* right side */}
-            <div className="w-right"></div>
-            <div
-             className="w-maincircle">
-                <div className="w-seccircle">
-                    <img src={Upwork} alt="" />
+            <div className="w-right">
+                <div className="w-maincircle">
+                    <div className="w-seccircle">
+                        <img src={mongodb} alt="" />
+                    </div>
+                    <div className="w-seccircle">
+                        <img src={react} alt="" />
+                    </div>
+                    <div className="w-seccircle">
+                        <img src={js} alt="" />
+                    </div>
+                    <div className="w-seccircle">
+                        <img src={expressjs} alt="" />
+                    </div>
+                    <div className="w-seccircle">
+                        <img src={nodejs} alt="" />
+                    </div>
+
                 </div>
-                <div className="w-seccircle">
-                    <img src={Fiverr} alt="" />
-                </div>
-                <div className="w-seccircle">
-                    <img src={Amazon} alt="" />
-                </div>
-                <div className="w-seccircle">
-                    <img src={Shopify} alt="" />
-                </div>
-                <div className="w-seccircle">
-                    <img src={Facebook} alt="" />
-                </div>
+                {/* bg circle */}
+                <div className="w-backcircle bluecircle"></div>
+                <div className="w-backcircle yellowcircle"></div>
             </div>
-            {/* bg circle */}
-            <div className="w-backcircle bluecircle"></div>
-            <div className="w-backcircle yellowcircle"></div>
         </div>
     )
 }
 
 export default Works
+
+

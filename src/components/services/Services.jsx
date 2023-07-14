@@ -5,20 +5,24 @@ import Card from "../../components/Card/Card";
 import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
+import { useContext } from "react";
+import { themeContext } from "../../Context";
 
 const Services = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="services" id="Services">
       {/* left side */}
       <div className="awesome">
-        <span>My Awesome</span>
+        <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
         <span>services</span>
         <span>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id cum
-          laudantium hic labore atque non, itaque mollitia, molestias
+        Strong foundation in data structures and algorithms (DSA).
           <br />
-          necessitatibus quas magni excepturi dolores? Soluta a deserunt
-          corporis. Aut, reiciendis iste.
+          Proficient in C++, Java, and JavaScript.
+          <br />
+          Always looking for new challenges and opportunities to learn and grow.
         </span>
         <a href={Resume} download>
           <button className="button s-button">Download CV</button>
@@ -28,15 +32,15 @@ const Services = () => {
       {/* right side */}
       <div className="cards">
         <div
-        
+
           style={{
             left: "14rem",
           }}
         >
           <Card
             emoji={HeartEmoji}
-            heading={"Design"}
-            detail={"Fingma,Photoshop,Adobe"}
+            heading={"Coder"}
+            detail={"C,C++,Java,Python"}
           />
         </div>
         <div
@@ -59,14 +63,14 @@ const Services = () => {
         >
           <Card
             emoji={Humble}
-            heading={"UI/UX"}
-            detail={"Fingma,Photoshop,Adobe"}
+            heading={"Database"}
+            detail={"MySQL,MongoDB"}
           />
         </div>
-      <div
-        className="blur s-blur2"
-        style={{ background: "var(--purple)" }}
-      ></div>
+        <div
+          className="blur s-blur2"
+          style={{ background: "var(--purple)" }}
+        ></div>
       </div>
     </div>
   );
