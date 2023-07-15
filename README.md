@@ -3,11 +3,11 @@
 
 
 This project was built using these technologies:
->React.js
->CSS3
->VsCode
->Vercel
->yarn
+ >React.js
+ >CSS3
+ >VsCode
+ >Vercel
+ >yarn
 
 **Dependencies** :
     **For Email Services**: "@emailjs/browser": "^3.11.0",
