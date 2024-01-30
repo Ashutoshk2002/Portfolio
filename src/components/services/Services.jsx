@@ -40,7 +40,7 @@ const Services = () => {
           <Card
             emoji={HeartEmoji}
             heading={"Coder"}
-            detail={"C,C++,Java,Python"}
+            detail={"Java,C,C++"}
           />
         </div>
         <div
@@ -52,7 +52,7 @@ const Services = () => {
           <Card
             emoji={Glasses}
             heading={"Developer"}
-            detail={"Html,CSS,JavaScript,React"}
+            detail={"React.js,JavaScript,HTML,CSS"}
           />
         </div>
         <div
